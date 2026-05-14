@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Noodlefun Wien</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #C62828; /* 主红色背景 */
+  }
+
+  .header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .header img {
+    width: 60%;
+    max-width: 350px;
+  }
+
+  .welcome {
+    text-align: center;
+    color: white;
+    padding: 10px 20px 30px;
+  }
+
+  .welcome h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(0,0,0,0.4);
+  }
+
+  .welcome p {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: auto;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+
+  .section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+
+  /* 按钮区域布局 */
+  .qr-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* 手机自动换行 */
+    margin-top: 20px;
+  }
+
+  /* Google Review 按钮 */
+  .review-btn img {
+    width: 200px;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .review-btn img:hover {
+    transform: scale(1.05);
+  }
+
+  /* 导航按钮（方形圆角 + 文字） */
+  .nav-box-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 195px;
+    height: 248px;
+
+    background: white;
+    color: #C62828;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 1.3;
+
+    font-size: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: -10px
+  }
+
+  .nav-box-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  }
+
+  /* 菜单图片 */
+  img.menu {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: block;
+  }
+
+  /* 公司背景 */
+  .about p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.7;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin-bottom: 18px;
+  }
+
+  /* 联系方式 */
+  .info {
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+    padding-bottom: 40px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="LOGO 1024 x 475.png" alt="Noodlefun Logo">
+</div>
+
+<!-- Willkommen 页面 -->
+<div class="welcome">
+  <h1>Willkommen bei Noodlefun</h1>
+  <p>Authentische asiatische Küche im Herzen von Wien – frisch, schnell und voller Geschmack.</p>
+</div>
+
+<div class="section qr">
+  <h2>Ihre Meinung bedeutet uns viel</h2>
+
+  <div class="qr-row">
+
+    <!-- Google Review 按钮 -->
+    <a href="https://g.page/r/CQJ1EGxJWChrEBM/review" target="_blank" class="review-btn">
+      <img src="Google review.png" alt="Google Bewertung">
+    </a>
+
+    <!-- 导航按钮（方形圆角 + 文字） -->
+    <a href="https://maps.google.com/?q=Alserstraße+19/5,+1080+Wien"
+       target="_blank" class="nav-box-btn">
+      🧭<br>Navigation<br>zum uns
+    </a>
+
+  </div>
+</div>
+
+<div class="section" id="menu">
+  <h2>Menü</h2>
+  <img class="menu" src="TV1.png">
+  <img class="menu" src="TV2.png">
+  <img class="menu" src="TV3.png">
+  <img class="menu" src="TV4.png">
+</div>
+
+<!-- 公司背景 -->
+<div class="section about">
+  <h2>Über uns</h2>
+  <p>
+    Noodlefun wurde mit einer einfachen Idee gegründet: gute asiatische Küche soll frisch,
+    ehrlich und für jeden zugänglich sein. Unser Team kombiniert traditionelle Rezepte aus
+    verschiedenen Regionen Asiens mit modernen Kochtechniken, um Gerichte zu schaffen, die
+    sowohl vertraut als auch überraschend sind.
+  </p>
+  <p>
+    Wir legen großen Wert auf hochwertige Zutaten, schnelle Zubereitung und einen Geschmack,
+    der in Erinnerung bleibt. Ob Nudeln, Reisgerichte oder Sushi – jedes Gericht wird mit
+    Sorgfalt und Leidenschaft zubereitet.
+  </p>
+  <p>
+    Seit unserer Eröffnung in der Alserstraße 19/5 ist es unser Ziel, ein Ort zu sein, an dem
+    sich Gäste wohlfühlen, gut essen und gerne wiederkommen. Wir freuen uns darauf, Sie bei
+    Noodlefun begrüßen zu dürfen.
+  </p>
+</div>
+
+<div class="section info">
+  <h2>Kontakt</h2>
+  <p>Alserstraße 19/5, 1080 Wien</p>
+  <p>Täglich 11:00–22:00</p>
+  <p>Tel: +43 660 89 83 797</p>
+</div>
+
+</body>
+</html>
