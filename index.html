@@ -1,205 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Noodlefun Wien</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-  body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #C62828; /* 主红色背景 */
-  }
-
-  .header {
-    text-align: center;
-    padding: 30px 20px;
-  }
-
-  .header img {
-    width: 60%;
-    max-width: 350px;
-  }
-
-  .welcome {
-    text-align: center;
-    color: white;
-    padding: 10px 20px 30px;
-  }
-
-  .welcome h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 12px rgba(0,0,0,0.4);
-  }
-
-  .welcome p {
-    font-size: 20px;
-    line-height: 1.5;
-    max-width: 700px;
-    margin: auto;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
-  }
-
-  .section {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  h2 {
-    text-align: center;
-    color: white;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
-  }
-
-  /* 按钮区域布局 */
-  .qr-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* 手机自动换行 */
-    margin-top: 20px;
-  }
-
-  /* Google Review 按钮 */
-  .review-btn img {
-    width: 200px;
-    border-radius: 12px;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-  }
-
-  .review-btn img:hover {
-    transform: scale(1.05);
-  }
-
-  /* 导航按钮（方形圆角 + 文字） */
-  .nav-box-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 195px;
-    height: 248px;
-
-    background: white;
-    color: #C62828;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 18px;
-
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    text-align: center;
-    line-height: 1.3;
-
-    font-size: 18px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-top: -10px
-  }
-
-  .nav-box-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  }
-
-  /* 菜单图片 */
-  img.menu {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    display: block;
-  }
-
-  /* 公司背景 */
-  .about p {
-    color: white;
-    font-size: 18px;
-    line-height: 1.7;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
-    margin-bottom: 18px;
-  }
-
-  /* 联系方式 */
-  .info {
-    text-align: center;
-    color: white;
-    line-height: 1.6;
-    padding-bottom: 40px;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
-  }
-</style>
+<meta name="description" content="Noodle Fun Wien – authentische asiatische Küche in der Alserstraße 19/5, 1080 Wien. Speisekarte, Online-Bestellung, Google Bewertungen und Weg zu uns.">
+<meta name="theme-color" content="#C62828">
+<meta property="og:title" content="Noodle Fun Wien">
+<meta property="og:description" content="Authentische asiatische Küche in Wien.">
+<meta property="og:type" content="restaurant">
+<title>Noodle Fun Wien | Asiatische Küche in 1080 Wien</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Noodle Fun",
+  "address":{"@type":"PostalAddress","streetAddress":"Alserstraße 19/5","postalCode":"1080","addressLocality":"Wien","addressCountry":"AT"},
+  "telephone":"+43 660 89 83 797",
+  "openingHours":"Mo-Su 11:00-22:00"
+}
+</script>
 </head>
-
 <body>
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Noodle Fun Startseite">
+      <img src="assets/LOGO 1024 x 475.png" alt="Noodle Fun Logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+      <a href="#menu">Menü</a><a href="#order">Bestellen</a><a href="#reviews">Bewertungen</a><a href="#about">Über uns</a><a href="#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
-<div class="header">
-  <img src="LOGO 1024 x 475.png" alt="Noodlefun Logo">
-</div>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-content">
+    <p class="eyebrow">Asiatische Küche in Wien</p>
+    <h1 id="hero-title">Willkommen bei Noodle Fun</h1>
+    <p class="hero-text">Authentische asiatische Küche im Herzen von Wien – frisch, schnell und voller Geschmack.</p>
+    <div class="cta-group">
+      <a class="btn btn-primary" href="#menu">🍜 Speisekarte ansehen</a>
+      <a class="btn btn-secondary" href="#order">🛵 Online bestellen</a>
+      <a class="btn btn-light" href="https://maps.google.com/?q=Alserstraße+19/5,+1080+Wien" target="_blank" rel="noopener noreferrer">📍 Weg zu uns</a>
+    </div>
+  </div>
+</section>
 
-<!-- Willkommen 页面 -->
-<div class="welcome">
-  <h1>Willkommen bei Noodlefun</h1>
-  <p>Authentische asiatische Küche im Herzen von Wien – frisch, schnell und voller Geschmack.</p>
-</div>
+<section class="quick-actions" aria-label="Schnellzugriff">
+  <div class="container action-grid">
+    <a class="action-card" href="#menu"><span class="action-icon">🍜</span><strong>Speisekarte</strong><span>Unsere Gerichte entdecken</span></a>
+    <a class="action-card" href="#order"><span class="action-icon">🛵</span><strong>Online bestellen</strong><span>Wolt &amp; Foodora</span></a>
+    <a class="action-card" href="https://maps.google.com/?q=Alserstraße+19/5,+1080+Wien" target="_blank" rel="noopener noreferrer"><span class="action-icon">🧭</span><strong>Weg zu uns</strong><span>Alserstraße 19/5</span></a>
+  </div>
+</section>
 
-<div class="section qr">
-  <h2>Ihre Meinung bedeutet uns viel</h2>
+<section class="section" id="menu" aria-labelledby="menu-title">
+  <div class="section-heading"><p class="eyebrow">Unsere Auswahl</p><h2 id="menu-title">Speisekarte</h2></div>
+  <div class="menu-gallery">
+    <img class="menu-image" src="assets/TV1.png" alt="Noodle Fun Speisekarte – Seite 1" loading="lazy" decoding="async">
+    <img class="menu-image" src="assets/TV2.png" alt="Noodle Fun Speisekarte – Seite 2" loading="lazy" decoding="async">
+    <img class="menu-image" src="assets/TV3.png" alt="Noodle Fun Speisekarte – Seite 3" loading="lazy" decoding="async">
+    <img class="menu-image" src="assets/TV4.png" alt="Noodle Fun Speisekarte – Seite 4" loading="lazy" decoding="async">
+  </div>
+</section>
 
-  <div class="qr-row">
+<section class="section order-section" id="order" aria-labelledby="order-title">
+  <div class="section-heading">
+    <p class="eyebrow">Online bestellen</p>
+    <h2 id="order-title">Wo möchtest du bestellen?</h2>
+    <p>
+      Bestelle dein Essen bequem über Wolt oder foodora.
+      Unser eigener Noodle Fun Online-Shop folgt später.
+    </p>
+  </div>
 
-    <!-- Google Review 按钮 -->
-    <a href="https://g.page/r/CQJ1EGxJWChrEBM/review" target="_blank" class="review-btn">
-      <img src="Google review.png" alt="Google Bewertung">
+  <div class="order-grid">
+
+    <!-- Wolt -->
+    <a
+      class="platform-card"
+      href="https://wolt.com/en/aut/vienna/restaurant/noodlefun"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Noodle Fun auf Wolt bestellen"
+    >
+      <span class="platform-logo">
+        <img src="assets/wolt-logo.png" alt="Wolt">
+      </span>
+      <strong>Wolt</strong>
+      <span>Jetzt bei Wolt bestellen →</span>
     </a>
 
-    <!-- 导航按钮（方形圆角 + 文字） -->
-    <a href="https://maps.google.com/?q=Alserstraße+19/5,+1080+Wien"
-       target="_blank" class="nav-box-btn">
-      🧭<br>Navigation<br>zum uns
+    <!-- foodora -->
+    <a
+      class="platform-card"
+      href="https://www.foodora.at/restaurant/ipc9/noodle-fun-ipc9"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Noodle Fun auf foodora bestellen"
+    >
+      <span class="platform-logo">
+        <img src="assets/foodora-logo.png" alt="foodora">
+      </span>
+      <strong>foodora</strong>
+      <span>Jetzt bei foodora bestellen →</span>
     </a>
+
+    <!-- Future Noodle Fun Online Shop -->
+    <div class="platform-card future-card">
+      <span class="platform-logo">🍜</span>
+      <strong>Noodle Fun Online-Shop</strong>
+      <span>Demnächst direkt bei Noodle Fun bestellen</span>
+    </div>
 
   </div>
-</div>
+</section>
 
-<div class="section" id="menu">
-  <h2>Menü</h2>
-  <img class="menu" src="TV1.png">
-  <img class="menu" src="TV2.png">
-  <img class="menu" src="TV3.png">
-  <img class="menu" src="TV4.png">
-</div>
+<section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+  <div class="section-heading"><p class="eyebrow">Deine Meinung zählt</p><h2 id="reviews-title">★★★★★</h2><p>Hat es dir bei uns gefallen? Wir freuen uns über deine Bewertung auf Google.</p></div>
+  <a class="btn btn-primary" href="https://g.page/r/CQJ1EGxJWChrEBM/review" target="_blank" rel="noopener noreferrer">⭐ Google Bewertung abgeben</a>
+</section>
 
-<!-- 公司背景 -->
-<div class="section about">
-  <h2>Über uns</h2>
-  <p>
-    Noodlefun wurde mit einer einfachen Idee gegründet: gute asiatische Küche soll frisch,
-    ehrlich und für jeden zugänglich sein. Unser Team kombiniert traditionelle Rezepte aus
-    verschiedenen Regionen Asiens mit modernen Kochtechniken, um Gerichte zu schaffen, die
-    sowohl vertraut als auch überraschend sind.
-  </p>
-  <p>
-    Wir legen großen Wert auf hochwertige Zutaten, schnelle Zubereitung und einen Geschmack,
-    der in Erinnerung bleibt. Ob Nudeln, Reisgerichte oder Sushi – jedes Gericht wird mit
-    Sorgfalt und Leidenschaft zubereitet.
-  </p>
-  <p>
-    Seit unserer Eröffnung in der Alserstraße 19/5 ist es unser Ziel, ein Ort zu sein, an dem
-    sich Gäste wohlfühlen, gut essen und gerne wiederkommen. Wir freuen uns darauf, Sie bei
-    Noodlefun begrüßen zu dürfen.
-  </p>
-</div>
+<section class="section about" id="about" aria-labelledby="about-title">
+  <div class="section-heading"><p class="eyebrow">Noodle Fun</p><h2 id="about-title">Über uns</h2></div>
+  <div class="about-copy">
+    <p>Noodlefun wurde mit einer einfachen Idee gegründet: gute asiatische Küche soll frisch, ehrlich und für jeden zugänglich sein. Unser Team kombiniert traditionelle Rezepte aus verschiedenen Regionen Asiens mit modernen Kochtechniken, um Gerichte zu schaffen, die sowohl vertraut als auch überraschend sind.</p>
+    <p>Wir legen großen Wert auf hochwertige Zutaten, schnelle Zubereitung und einen Geschmack, der in Erinnerung bleibt. Ob Nudeln, Reisgerichte oder Sushi – jedes Gericht wird mit Sorgfalt und Leidenschaft zubereitet.</p>
+    <p>Seit unserer Eröffnung in der Alserstraße 19/5 ist es unser Ziel, ein Ort zu sein, an dem sich Gäste wohlfühlen, gut essen und gerne wiederkommen.</p>
+  </div>
+</section>
 
-<div class="section info">
-  <h2>Kontakt</h2>
-  <p>Alserstraße 19/5, 1080 Wien</p>
-  <p>Täglich 11:00–22:00</p>
-  <p>Tel: +43 660 89 83 797</p>
-</div>
+<section class="section contact-section" id="contact" aria-labelledby="contact-title">
+  <div class="section-heading"><p class="eyebrow">Besuch uns</p><h2 id="contact-title">Kontakt</h2></div>
+  <div class="contact-grid">
+    <div class="contact-card"><strong>📍 Adresse</strong><span>Alserstraße 19/5, 1080 Wien</span></div>
+    <div class="contact-card"><strong>🕐 Öffnungszeiten</strong><span>Täglich 11:00–22:00</span></div>
+    <div class="contact-card"><strong>📞 Telefon</strong><a href="tel:+436608983797">+43 660 89 83 797</a></div>
+  </div>
+  <div class="contact-actions">
+    <a class="btn btn-primary" href="https://maps.google.com/?q=Alserstraße+19/5,+1080+Wien" target="_blank" rel="noopener noreferrer">🧭 Route öffnen</a>
+    <a class="btn btn-light" href="tel:+436608983797">📞 Anrufen</a>
+  </div>
+</section>
+</main>
 
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><img class="footer-logo" src="assets/LOGO 1024 x 475.png" alt="Noodle Fun Logo"><p>Authentische asiatische Küche in Wien.</p></div>
+    <div><h2>Kontakt</h2><p>Alserstraße 19/5<br>1080 Wien</p><p>Täglich 11:00–22:00</p></div>
+    <div><h2>Links</h2><a href="#menu">Speisekarte</a><a href="#order">Online bestellen</a><a href="https://g.page/r/CQJ1EGxJWChrEBM/review" target="_blank" rel="noopener noreferrer">Google Bewertung</a><a href="https://maps.google.com/?q=Alserstraße+19/5,+1080+Wien" target="_blank" rel="noopener noreferrer">Weg zu uns</a></div>
+    <div><h2>Rechtliches</h2><a href="pages/impressum.html">Impressum</a><a href="pages/datenschutz.html">Datenschutz</a></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><span>© 2026 Noodle Fun</span><a href="#top">Nach oben ↑</a></div></div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,3 @@
+const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector("#site-nav");
+if(toggle&&nav){toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Menü schließen":"Menü öffnen")});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-label","Menü öffnen")}))}
+document.querySelectorAll("[data-external-placeholder]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();alert(`${a.dataset.externalPlaceholder}-Link noch nicht hinterlegt. Bitte die verifizierte Bestell-URL eintragen.`)}));
